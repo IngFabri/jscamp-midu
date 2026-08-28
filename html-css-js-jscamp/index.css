@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+  /* Fondos (Backgrounds) */
+  --bg-primary: #0b1320;       /* Azul oscuro profundo del fondo principal */
+  --bg-card: #111c2e;          /* Azul marino ligeramente más claro para las secciones y tarjetas */
+  --bg-button: #0066cc;        /* Azul brillante del botón "Buscar" y "Publicar un empleo" */
+
+  /* Textos y Elementos Activos */
+  --text-primary: #ffffff;      /* Blanco puro para títulos principales y texto de botones */
+  --text-muted: #94a3b8;        /* Gris azulado claro para subtítulos y textos secundarios */
+  --text-placeholder: #4b5563;  /* Gris oscuro utilizado en el texto de sugerencia del buscador */
+
+  /* Bordes y Líneas */
+  --border-input: #1e293b;     /* Azul grisáceo oscuro para el contorno de la barra de búsqueda */
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    min-height: 10vh;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.100);
+
+    h1{
+        font-size: 1.4em;
+        svg{
+            vertical-align:bottom;
+        }
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 10px;
+    }
+
+    button{
+        background-color: var(--text-placeholder);
+        padding: 6px;
+        border: none;
+        border-radius: 5px;
+        color: inherit;
+    }
+}
+
+main{
+    display: flex;
+    height: 85vh;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.100);
+
+    div:first-child{
+        text-align: center;
+
+        h2{
+            font-size: 2.5em;
+        }
+        
+        p{
+            font-size: 1.2em;
+        }
+
+        form{
+            vertical-align: middle;
+            height: 20px;
+            width: 500px;
+            svg{
+                vertical-align: middle;
+                width: 0;
+                background-color: var(--border-input);
+            }
+
+            input{
+                height: 100%;
+                width: 80%;
+            }
+
+            button{
+                height: 100%;
+                width: 15%;
+            }
+        }
+    }
+}
+
+footer{
+    display: flex;
+    background-color: var(--bg-primary);
+    color: var(--text-muted);
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+}
