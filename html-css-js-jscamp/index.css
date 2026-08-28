@@ -34,6 +34,7 @@ nav{
         font-size: 1.4em;
         svg{
             vertical-align:bottom;
+            color: var(--bg-button);
         }
     }
 
@@ -41,6 +42,11 @@ nav{
         list-style: none;
         display: flex;
         gap: 10px;
+
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
     }
 
     button{
@@ -49,6 +55,11 @@ nav{
         border: none;
         border-radius: 5px;
         color: inherit;
+    }
+
+    button:first-child{
+        background-color: var(--border-input);
+        color: var(--bg-button);
     }
 }
 
@@ -64,35 +75,77 @@ main{
 
     div:first-child{
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
 
         h2{
             font-size: 2.5em;
         }
         
         p{
-            font-size: 1.2em;
+            font-size: 1em;
+            width: 80%;
         }
 
         form{
-            vertical-align: middle;
-            height: 20px;
-            width: 500px;
-            svg{
-                vertical-align: middle;
-                width: 0;
-                background-color: var(--border-input);
-            }
+            border: 1px solid var(--border-input);
+            background-color: var(--bg-card);
+            display: flex;
+            justify-content: center;
+            height: 45px;
+            width: 450px;
+            gap: 15px;
+            border-radius: 7px;
+            padding: 5px;
+            margin-bottom: 50px;
 
-            input{
-                height: 100%;
-                width: 80%;
+            svg{
+                height: 1em;
+                margin: auto;
+                color: var(--text-muted);
             }
 
             button{
-                height: 100%;
-                width: 15%;
+                background-color: var(--bg-button);
+                color: var(--text-primary);
+                padding: 5px;
+                border: none;
+                border-radius: 7px;
+                vertical-align:baseline;
+                width: 100px;
+                
+            }
+
+            input{
+                background-color: inherit;
+                border: none;
+                color: inherit;
+                height: 90%;
+                width: 100%;
+                margin-top: auto;
+
+                &:focus{
+                    outline: none;
+                }
             }
         }
+    }
+
+    #main-container{
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    div:nth-child(2){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
     }
 }
 
